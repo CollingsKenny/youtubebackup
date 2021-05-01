@@ -12,7 +12,7 @@ with open('likedvideoplaylist.csv', newline='') as csvfile:
 
 ydl_opts = {
     'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]',
-    'outtmpl': '/data/%(title)s %(uploader)s.%(ext)s',
+    'outtmpl': '/data/%(title)s.%(ext)s',
     'writethumbnail': True,
     'postprocessors': [
         {'key': 'EmbedThumbnail'},
