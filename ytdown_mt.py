@@ -68,7 +68,7 @@ with open('likedvideoplaylist.csv', newline='') as csvfile:
 # COMMAND LINE ARGUMENTS
 #   (validation method: crap in crap out)
 destination = sys.argv[1]
-numThreads = 2
+numThreads = 4
 maxCount = 100
 
 if len(sys.argv) > 2:
@@ -130,14 +130,14 @@ for i in range(maxCount):
     if not i in report:
         print("Ooops ", i, " is not even here!!")
 
-# Report min number
+# Find min number in report
 min = report[0]
 for c in report:
     if c < min:
         min = c
 print("The smallest number was", min)
 
-# Report max number
+# Find max number in report
 max = report[0]
 for c in report:
     if c > max:
